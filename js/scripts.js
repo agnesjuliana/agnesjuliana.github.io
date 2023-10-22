@@ -1,12 +1,3 @@
-/*!
-* Start Bootstrap - New Age v6.0.7 (https://startbootstrap.com/theme/new-age)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-new-age/blob/master/LICENSE)
-*/
-//
-// Scripts
-// 
-
 window.addEventListener('DOMContentLoaded', event => {
 
     // Activate Bootstrap scrollspy on the main nav element
@@ -32,3 +23,41 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+
+function validateForm() {
+    var name = document.getElementById("name");
+    var email = document.getElementById("email");
+    var phone = document.getElementById("phone");
+    var message = document.getElementById("message");
+
+    var nameInvalid = document.getElementById("name-invalid");
+    var emailInvalid = document.getElementById("email-invalid");
+    var phoneInvalid = document.getElementById("phone-invalid");
+    var messageInvalid = document.getElementById("message-invalid");
+
+    // cek yang invalid
+    if (name.value == "") {
+        name.focus();
+        nameInvalid.style.display = "block";
+        return false;
+    }
+
+    if (email.value == "") {
+        email.focus();
+        emailInvalid.style.display = "block";
+        return false;
+    }
+
+    if (phone.value == "") {
+        phone.focus();
+        phoneInvalid.style.display = "block";
+        return false;
+    }
+
+    if (message.value == "") {
+        message.focus();
+        messageInvalid.style.display = "block";
+        return false;
+    }
+}
